@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+
+kind: Deployment
+metadata:
+  name: test
+  labels:
+    app: nginxapp
+
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: n1
+
+  template:
+    metadata:
+      labels: 
+        app: n1
+    spec:
+      containers:
+        - name: nginx-deployment
+          image: rahuldock16/k8s-image
+          ports: 
+            - containerPort: 80
