@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
         - name: nginx-deployment
-          image: rahuldock16/k8s-test:#{Build.BuildId}#
+          image: docker.io/rahuldock16/k8s-image
           ports: 
             - containerPort: 80
